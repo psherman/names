@@ -2,14 +2,40 @@
 
 Generate a random male/female name using most popular names in the US.
 
-####`namegen.Male`
+    package main
+
+    import (
+        "fmt"
+        "github.com/psherman/names/namegen"
+    )
+
+    func main() {
+        male := namegen.Male()
+        female := namegen.Female()
+
+        fmt.Printf("%s and %s, the dynamic duo!\n", male, female)
+    }
+
+#####`namegen.Male`
 
 Return a male name using a male name randomly selected from the male name array and a surname randomly selected from the surname array
 
-####`namegen.Female`
+#####`namegen.Female`
 
 Return a female name using a male name randomly selected from the female name array and a surname randomly selected from the surname array
 
-####`namegen.Random`
+#####`namegen.Random`
 
 50/50 chance to return either a male or female name using either `namegen.Male` or `namegen.Female`
+
+#####`namegen.WeightedMale`
+
+Return a male name using a male name randomly selected from the male name array and a surname randomly selected from the surname array. The names are weighted out of 1000, with more popular names having a higher chance of being selected.
+
+#####`namegen.WeightedFemale`
+
+Return a female name using a male name randomly selected from the female name array and a surname randomly selected from the surname array. The names are weighted out of 1000, with more popular names having a higher chance of being selected.
+
+#####`namegen.WeightedRandom`
+
+50/50 chance to return either a male or female name using either `namegen.WeightedMale` or `namegen.WeightedFemale`
