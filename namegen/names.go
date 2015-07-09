@@ -24,3 +24,17 @@ func Male() string {
 	surnamePos := rand.Intn(len(surnames))
 	return fmt.Sprintf("%s %s", maleNames[firstPos], surnames[surnamePos])
 }
+
+func Female() string {
+	firstPos := rand.Intn(len(femaleNames))
+	surnamePos := rand.Intn(len(surnames))
+	return fmt.Sprintf("%s %s", femaleNames[firstPos], surnames[surnamePos])
+}
+
+func Random() string {
+	if rand.Float64() < 0.5 {
+		return Male()
+	} else {
+		return Female()
+	}
+}
