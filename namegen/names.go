@@ -32,21 +32,21 @@ func Surname() string {
 	return surnames[rand.Intn(len(surnames))].name
 }
 
-func WeightedMaleFirst() string {
+func MaleFirstWeighted() string {
 	value := rand.Float64() * 1000
 	pos := sort.Search(len(maleNames),
 		func(i int) bool { return maleNames[i].threshold > value })
 	return maleNames[pos].name
 }
 
-func WeightedFemaleFirst() string {
+func FemaleFirstWeighted() string {
 	value := rand.Float64() * 1000
 	pos := sort.Search(len(femaleNames),
 		func(i int) bool { return femaleNames[i].threshold > value })
 	return femaleNames[pos].name
 }
 
-func WeightedSurname() string {
+func SurnameWeighted() string {
 	value := rand.Float64() * 1000
 	pos := sort.Search(len(surnames),
 		func(i int) bool { return surnames[i].threshold > value })
@@ -69,18 +69,18 @@ func Random() string {
 	}
 }
 
-func WeightedMale() string {
-	return fmt.Sprintf("%s %s", WeightedMaleFirst(), WeightedSurname())
+func MaleWeighted() string {
+	return fmt.Sprintf("%s %s", MaleFirstWeighted(), SurnameWeighted())
 }
 
-func WeightedFemale() string {
-	return fmt.Sprintf("%s %s", WeightedFemaleFirst(), WeightedSurname())
+func FemaleWeighted() string {
+	return fmt.Sprintf("%s %s", FemaleFirstWeighted(), SurnameWeighted())
 }
 
-func WeightedRandom() string {
+func RandomWeighted() string {
 	if rand.Float64() < 0.5 {
-		return WeightedMale()
+		return MaleWeighted()
 	} else {
-		return WeightedFemale()
+		return FemaleWeighted()
 	}
 }

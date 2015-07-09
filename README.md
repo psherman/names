@@ -28,15 +28,15 @@ Return a random female first name.
 
 Return a random surname.
 
-#####`namegen.WeightedMaleFirst`
+#####`namegen.MaleFirstWeighted`
 
 Return a random male first name. The names are weighted out of 1000, with more popular names having a higher chance of being selected.
 
-#####`namegen.WeightedFemaleFirst`
+#####`namegen.FemaleFirstWeighted`
 
 Return a random female first name. The names are weighted out of 1000, with more popular names having a higher chance of being selected.
 
-#####`namegen.WeightedSurname`
+#####`namegen.SurnameWeighted`
 
 Return a random surname. The names are weighted out of 1000, with more popular names having a higher chance of being selected.
 
@@ -52,14 +52,14 @@ Return a female name using a male name randomly selected from the female name ar
 
 50/50 chance to return either a male or female name using either `namegen.Male` or `namegen.Female`
 
-#####`namegen.WeightedMale`
+#####`namegen.MaleWeighted`
 
 Return a male name using a male name randomly selected from the male name array and a surname randomly selected from the surname array. The names are weighted out of 1000, with more popular names having a higher chance of being selected.
 
-#####`namegen.WeightedFemale`
+#####`namegen.FemaleWeighted`
 
 Return a female name using a male name randomly selected from the female name array and a surname randomly selected from the surname array. The names are weighted out of 1000, with more popular names having a higher chance of being selected.
 
-#####`namegen.WeightedRandom`
+#####`namegen.RandomWeighted`
 
-50/50 chance to return either a male or female name using either `namegen.WeightedMale` or `namegen.WeightedFemale`
+50/50 chance to return either a male or female name using either `namegen.MaleWeighted` or `namegen.FemaleWeighted`

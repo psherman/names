@@ -15,7 +15,7 @@ func main() {
 	fmt.Printf("Random:\t%s\n", namegen.Random())
 
 	fmt.Printf("\nWeighted Names\n-------------------\n")
-	fmt.Printf("Male:\t%s\n", namegen.WeightedMale())
-	fmt.Printf("Female:\t%s\n", namegen.WeightedFemale())
-	fmt.Printf("Random:\t%s\n", namegen.WeightedRandom())
+	fmt.Printf("Male:\t%s\n", namegen.MaleWeighted())
+	fmt.Printf("Female:\t%s\n", namegen.FemaleWeighted())
+	fmt.Printf("Random:\t%s\n", namegen.RandomWeighted())
 }
